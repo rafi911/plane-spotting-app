@@ -1,0 +1,33 @@
+
+.add-sighting-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .add-sighting-buttons {
+    margin-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  mat-form-field {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  .actions {
+    margin-top: 20px;
+    text-align: right;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+  }

@@ -1,0 +1,54 @@
+.list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .mat-table {
+    width: 80%;
+  }
+  
+  .mat-header-row {
+    background-color: #fafafa;
+  }
+  
+  .mat-row:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .mat-cell, .mat-header-cell {
+    text-align: center;
+  }
+  
+  .mat-cell img {
+    max-height: 50px;
+  }
+  
+  .add-button {
+    margin-top: 20px;
+  }
+  
+  .back-button {
+    margin-top: 20px;
+  }
+  .mdc-data-table__header-cell {
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .mat-elevation-z8{
+    margin-top: 10px;
+    align-items: center;
+    height: 100vh; 
+  }
+  .search-and-add-container {
+    align-items: center;
+  }
+  .search-field {
+    margin-right: 10px;
+  }
+
+  .add-button { 
+    float: right;
+    margin-right: 10px
+  }

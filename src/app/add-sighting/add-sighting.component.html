@@ -1,0 +1,63 @@
+<div class="container">
+    <form [formGroup]="sightingForm" (ngSubmit)="onSubmit()" class="text-left" style="width: 400px;">
+      <h2>Add New Sighting</h2>
+      <mat-form-field>
+        <mat-label>Make</mat-label>
+        <input matInput formControlName="make">
+        <mat-error *ngIf="sightingForm.controls['make'].hasError('required')">
+          Make is required
+        </mat-error>
+        <mat-error *ngIf="sightingForm.controls['make'].hasError('maxlength')">
+          Make should be maximum 128 characters
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Model</mat-label>
+        <input matInput formControlName="model">
+        <mat-error *ngIf="sightingForm.controls['model'].hasError('required')">
+          Model is required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Registration</mat-label>
+        <input matInput formControlName="registration">
+        <mat-error *ngIf="sightingForm.controls['registration'].hasError('required')">
+          Registration is required
+        </mat-error>
+        <mat-error *ngIf="sightingForm.controls['registration'].hasError('pattern')">
+          Registration should be in the format of two parts separated by a hyphen. Prefix should be either one or two characters. Suffix should be between one and five characters.
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Location</mat-label>
+        <input matInput formControlName="location">
+        <mat-error *ngIf="sightingForm.controls['location'].hasError('required')">
+          Location is required
+        </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field>
+        <mat-label>Date and Time Seen</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="dateTimeSeen">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+        <mat-error *ngIf="sightingForm.controls['dateTimeSeen'].hasError('required')">
+          Date and Time Seen is required
+        </mat-error>
+        <mat-error *ngIf="sightingForm.controls['dateTimeSeen'].hasError('pastDateTime')">
+          Date and Time Seen should be a valid datetime in the past
+        </mat-error>
+      </mat-form-field>
+  
+      <div class="actions">
+        <button mat-raised-button routerLink="/" color="warn">Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="sightingForm.invalid" style="margin-left: 8px;">
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+  

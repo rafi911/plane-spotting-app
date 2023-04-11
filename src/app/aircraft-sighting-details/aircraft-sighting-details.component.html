@@ -1,0 +1,10 @@
+<div *ngIf="sighting">
+    <h2>{{ sighting.make}} - {{ sighting.model}}</h2>
+    <p>Registration: {{ sighting.registration }}</p>
+    <p>Location: {{ sighting.location }}</p>
+    <p>Date and Time: {{ sighting.dateTimeSeen | date:'medium' }}</p>
+  </div>
+
+  <a mat-button routerLink="/">
+    <mat-icon>arrow_back</mat-icon> Back to List
+  </a>
